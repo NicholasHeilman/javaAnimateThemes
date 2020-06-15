@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="user_selectable_area">user selectable area</string>
+    <string name="textview">TextView</string>
+    <string name="play_again">Play Again</string>
+    <string name="draw_game">Draw Game</string>
+</resources>
