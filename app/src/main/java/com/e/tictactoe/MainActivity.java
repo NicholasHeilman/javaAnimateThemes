@@ -32,22 +32,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void dropIn(View view) {
-        ImageView counter = (ImageView) view;
-        int tappedTag = Integer.parseInt(counter.getTag().toString());
+        ImageView playerChip = (ImageView) view;
+        int tappedTag = Integer.parseInt(playerChip.getTag().toString());
 
         //check if space is occupied
         if( gameState[tappedTag] == 0 && isGameActive ) {
             gameState[tappedTag] = activePlayer;
-            counter.setTranslationY(-1500);
+            playerChip.setTranslationY(-1500);
             if (activePlayer == 1) {
-                counter.setImageResource(R.drawable.yellow);
+                playerChip.setImageResource(R.drawable.yellow);
                 activePlayer = 2;
             } else {
-                counter.setImageResource(R.drawable.red);
+                playerChip.setImageResource(R.drawable.red);
                 activePlayer = 1;
             }
             gameMoveCount++;
-            counter.animate().translationY(0).rotationBy(500).setDuration(1000).start();
+            playerChip.animate().translationY(0).rotationBy(500).setDuration(1000).start();
 
             //  draw game condition
             if(gameMoveCount >=9 && isGameActive){
